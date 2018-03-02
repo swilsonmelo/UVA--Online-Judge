@@ -1,52 +1,66 @@
-#include <stdio.h>
-#include <iostream>
-#include <sstream>
+#include <bits/stdc++.h>
+
+
 using namespace std;
 
-int main() {
-	long long DP[301][301] = {};
-	int i, j, k;
+
+long long dp[305][305];
+
+
+void coinChange(){
+	dp[0][0] = 1;
+	for(int i = 1; i <= 300; i++){
+		for(int j = i; j<=300; j++){
+			for(int k = 1; k<= j; k++){
+				dp[j][k] += dp[j-i][k-1];
+			}						
+		}
+	}
+		
+	
+	
+}
+
+int main(){
+	
+	freopen("in.txt","r",stdin);
+	coinChange();
 	char str[1000];
-	DP[0][0] = 1;
-	for(i = 1; i <= 10; i++) {
-		for(j = i; j <= 10; j++) {
-			for(k = 1; k <= j; k++){
-			
-				//printf("%d %d %d\n",i,j,k);
-				DP[j][k] += DP[j-i][k-1];
-			}
-		}
-	}
-	
-	//puts("");
-	/*
-	for(i = 1; i <= 10; i++) {
-		for(j = 1; j <= 10; j++) {
-			printf("%ld",DP[i][j]);
-		}
-		puts("");
-	}
-	*/
-	
-	
-	while(gets(str)) {
-		stringstream sin(str);
-		int num[3], n = 0;
-		while(sin >> num[n])
+	int n;
+	int num[3];
+	while(gets(str)){
+		n = 0;
+		char *pch;
+		pch = strtok(str," ");
+		while(pch != NULL){
+			num[n] = atoi(pch);
 			n++;
-		int p, q;
-		if(n == 1)	
-			p = 0, q = num[0];
-		else if(n == 2)
-			p = 0, q = num[1];
-		else
-			p = num[1], q = num[2];
-		n = num[0];
-		if(q > n)	q = n;
-		long long ans = 0;
-		for(i = p; i <= q; i++)
-			ans += DP[n][i];
-		printf("%lld\n", ans);
+			pch = strtok(NULL," ");
+		}
+		/*
+		for(int i = 0; i < n; i++) printf("%d\n",num[i]);
+		puts("");
+		*/
+		int l1,l2;
+		//printf("%d\n",n);
+		if(n == 1){
+			l1 = 0;
+			l2 = num[0];
+		}else if(n==2){
+			l1 = 0;
+			l2 = num[1];
+		}else{
+			l1 = num[1];
+			l2 = num[2];
+		}
+		if(l2 > num[0]) l2 = num[0];
+		long long res = 0;
+		//printf("%d %d %d allvv\n",l1,l2,num[0] );
+		for(int i = l1; i <= l2; i++) res += dp[num[0]][i];
+		printf("%lld\n",res);
+		
+		
 	}
-    return 0;
+
+	return 0;
 }
