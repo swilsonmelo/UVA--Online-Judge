@@ -35,7 +35,7 @@ def solve():
     #print(padres)
     for i in range(nodos,0,-1):
         u = inDegree[i][1]
-        if vis[u] == 0:
+        if vis[u] == 0 and len(graph[u]) >= 2:
             vis[u] = 1
             for j in range(len(graph[u])):
                 v = graph[u][j]
