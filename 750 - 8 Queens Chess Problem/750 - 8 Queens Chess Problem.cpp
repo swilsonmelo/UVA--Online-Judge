@@ -33,7 +33,7 @@ void backtrack(int c){
 
 int main(){
 	int tc;
-	freopen("in.txt","r",stdin);
+	//freopen("in.txt","r",stdin);
 	scanf("%d",&tc);
 	for( int c = 0; c < tc; c++){
 		scanf("%d %d",&x,&y);
