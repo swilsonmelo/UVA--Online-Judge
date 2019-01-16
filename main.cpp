@@ -10,8 +10,8 @@ int main(){
     printf("Hello World\n");
     
     */
-    freopen("in.txt","r",stdin);
-    freopen("out.txt","w",stdout);
+    //freopen("in.txt","r",stdin);
+    //freopen("out.txt","w",stdout);
     int x,y;
     scanf("%d",&x);
     scanf("%d",&y);
