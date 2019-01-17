@@ -9,7 +9,7 @@ long maxSum = 0, currSum = 0;
 vector<int> ArrayNums;
 
 void kadane(){
-	//printf(" kha   %d \n",maxSum);
+	
 	for(int i = 0; i < ArrayNums.size(); i++ ){
 		if( currSum < 0 ){
 			currL = i, currR = i + 1, currSum = ArrayNums[i];

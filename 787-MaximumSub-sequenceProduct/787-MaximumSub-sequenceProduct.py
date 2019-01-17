@@ -1,5 +1,9 @@
 from sys import stdin
 
+"""
+
+Esto funicona, solo si es resultado es positivo.
+
 
 def kadaneModif(arr):
     maxEndingHere = 1
@@ -20,11 +24,23 @@ def kadaneModif(arr):
             maxSoFar = maxEndingHere
 
     return maxSoFar
+
+
+"""
 def main():
 
     m = [int(x) for x in stdin.readline().strip().split()]
     while m:
-        print(kadaneModif(m))
+        #print(m)
+        maxPro = -999999
+        for i in range(len(m)-1):
+            currPro = 1
+            for j in range(i,len(m)-1):
+                currPro *= m[j]
+                #print(currPro,maxPro)
+                maxPro = max(currPro, maxPro)
+        print(maxPro)
+            
         m = [int(x) for x in stdin.readline().strip().split()]
 
 
