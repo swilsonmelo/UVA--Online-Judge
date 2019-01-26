@@ -24,7 +24,7 @@ y = 0
 for i in dic:
     if dic[i] > y:
         y = dic[i]
-print(z)
+#print(z)
 for i in z:
     if dic[i] == y:
         suma = 0
