@@ -4,8 +4,10 @@
 using namespace std;
 
 int main(){
-    freopen("in.txt","r",stdin);
-    freopen("out.txt","w",stdout);
+    //freopen("in.txt","r",stdin);
+    //freopen("out.txt","w",stdout);
+
+    printf("%Lf\n",1.0L);
 	vector<string>v;
 	string shobdo;
 	string fs;
@@ -37,6 +39,8 @@ int main(){
 		}
 
 	}
+
+
 
 	return 0;
 }
