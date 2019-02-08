@@ -1,0 +1,8 @@
+kha1 12
+Case #1:
+5
+Case #2:
+No magic :(
+kha1 12
+Case #3:
+5
