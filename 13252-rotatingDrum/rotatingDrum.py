@@ -39,4 +39,6 @@ def main():
         print(r,len(r))
         l = [int(x) for x in stdin.readline().strip().split()]
 
+        
+
 main()
