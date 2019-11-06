@@ -3,3 +3,12 @@ This is a repository of my onlinejudge exercises in c ++, python and java!!! tha
 
 ## user: swilson
 [My uhunt](https://uhunt.onlinejudge.org/id/874756)
+
+## Running Locally
+
+JAVA
+
+```sh
+$ javac Main.java
+$ java Main
+```
