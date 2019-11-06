@@ -1,8 +1,7 @@
-package maraton;
 
 import java.io.*;
 
-public class ModularFibonacci10229 {
+public class Main {
  
     public static long [][] getMatrixMult(long[][] mat1, long [][] mat2,long m){
         long [][] res = new long [mat1.length][mat2[0].length];
