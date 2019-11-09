@@ -46,11 +46,12 @@ int Binary_search(int w){
 
 void computing(){
     sort(D.begin() , D.end() , cmp);
-    
+    /*
     for (int i = 0; i < D.size(); i++)
     {
         printf(" %d %d\n",D[i].w, D[i].h);
     }
+    */
     
     ans.push_back(D[0]);
     for(int i = 1; i < D.size(); i++){
