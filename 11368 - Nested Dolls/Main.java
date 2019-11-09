@@ -9,7 +9,10 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Main {
-
+	/**
+	 *Runtime Error, but the same code in c++ is Accepted
+	 *I Thing the Error is in the line 39 with the sort
+	 */
 	public static ArrayList<Doll> dolls;
 	public static ArrayList<Doll> ans;	
 	
@@ -33,7 +36,7 @@ public class Main {
 			System.out.println(dolls.get(i).w + " " + dolls.get(i).h);			
 		}
 		*/
-		//Collections.sort(dolls);
+		Collections.sort(dolls);
 		ans.add(dolls.get(0));
 		for (int i = 1; i < dolls.size(); i++) {
 			int temp = binarySearh(dolls.get(i).w);
